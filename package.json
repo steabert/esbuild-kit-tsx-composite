@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": [
+    "lib",
+    "prog"
+  ],
+  "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "bundle": "esbuild --bundle prog/a.ts",
+    "types": "tsc -b prog/tsconfig.json",
+    "fail": "yarn tsx --tsconfig=prog/tsconfig.json prog/a.ts"
+  },
+  "devDependencies": {
+    "esbuild": "0.15.6",
+    "tsx": "3.9.0",
+    "typescript": "4.8.2"
+  }
+}
